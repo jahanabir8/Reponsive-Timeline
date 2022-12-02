@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.timeline__inner{
+    position: relative;
+}
+
+.timeline__inner::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 2px;
+    background-color: #a8a8a8;
+    left: 50%;
+    top: 67px;
+    /* right: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.direction-r h4, .direction-r .flag, .direction-r p{
+    padding-left: 100px;
+}
+
+.direction-l h4, .direction-l .flag, .direction-l p{
+    padding-right: 150px;
+}
+
+.direction-l{
+    text-align: right;
+}
+
+
+.direction-r h4, .direction-l h4{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.direction-r span, .direction-l span{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 35px;
+    color: #6f6f6f;
+    font-weight: 400;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.direction-r .flag, .direction-l .flag{
+    position: relative;
+}
+
+/* .direction-l .flag, .direction-r .flag2{
+    display: block;
+} */
+
+.direction-r .flag2{
+    margin-left: 100px;
+    width: 100%;
+    max-width: 385px;
+}
+
+.direction-l .flag2{
+    display: block;
+    width: 100%;
+    max-width: 385px;
+    margin-left: auto;
+    margin-right: 150px;
+}
+
+.direction-r .flag::before, .direction-l .flag::before{
+    position: absolute;
+    content: "";
+    left: -12px;
+    top: 10px;
+    background: #FACD02;
+    height: 25px;
+    width: 25px;
+    transform: rotate(45deg);
+    z-index: 10;
+}
+
+.direction-l .flag::before{
+    left: unset;
+    right: -13px !important;
+    top: 24px;
+}
+
+.direction-r .flag::after, .direction-l .flag::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    background-color: #000;
+    height: 2px;
+    width: 40px;
+    z-index: 9;
+}
+
+.direction-l .flag::after{
+    left: unset;
+    right: 0;
+    width: 117px;
+}
+
+.direction-r p, .direction-l p{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 1199px) {
+
+    .direction-r h4, .direction-r .flag, .direction-r p{
+        padding-left: 50px;
+    }
+
+    .direction-r .flag2{
+        margin-left: 50px;
+    }
+
+    .direction-l h4, .direction-l .flag, .direction-l p{
+        padding-right: 50px;
+    }
+
+    .direction-l .flag::before{
+        top: 10px;
+    }
+
+    .direction-l .flag::after{
+        width: 40px;
+        top: 21px;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 767px) {
+    
+    .timeline__inner::before{
+        top: 54px;
+    }
+
+    .direction-r h4, .direction-l h4{
+        font-size: 20px;
+    }
+
+    .direction-r span, .direction-l span{
+        margin-bottom: 4px;
+    }
+
+    .direction-r span, .direction-l span, .direction-r p, .direction-l p{
+        font-size: 14px;
+        line-height: normal;
+        /* font-weight: 400; */
+    }
+
+    .direction-r p, .direction-l p{
+        font-weight: 300;
+    }
+
+    .direction-r .flag::before, .direction-l .flag::before{
+        top: 3px;
+        left: -7px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .direction-l .flag::after {
+        top: 10px;
+    }
+
+    .direction-l .flag::before{
+            left: unset;
+            right: -9px !important;
+            top: 3px;
+        }
+}
+
+@media screen and (max-width: 424px) {
+    .direction-r h4, .direction-r .flag, .direction-r p {
+        padding-left: 30px;
+    }
+
+    .direction-r .flag2{
+        margin-left: 30px;
+    }
+
+    .direction-r .flag::after, .direction-l .flag::after{
+        width: 25px;
+    }
+
+    .direction-l h4, .direction-l .flag, .direction-l p{
+        padding-right: 30px;
+    }
+
+}
